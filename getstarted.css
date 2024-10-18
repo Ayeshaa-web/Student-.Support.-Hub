@@ -1,0 +1,70 @@
+body {
+    font-family: Georgia, serif; /* Use Georgia font */
+    background-color: #f5f5f5; /* Light Gray */
+    margin: 0;
+    padding: 0;
+}
+
+header {
+      background: linear-gradient(to right, #D2B68A, #0056b3);
+    color: #ffffff; /* White */
+    text-align: center;
+    padding: 2em 0;
+}
+
+h1 {
+    margin: 0;
+}
+
+section {
+    max-width: 900px;
+    margin: 20px auto;
+    padding: 20px;
+}
+
+.card {
+    background-color: #e6f7ff; /* Light Blue */
+    padding: 15px;
+    margin: 15px 0;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    color: #003366; /* Dark Blue */
+}
+
+h3 {
+    color: #003366; /* Dark Blue */
+}
+
+p {
+    line-height: 1.6;
+}
+
+.btn {
+    display: inline-block;
+    background-color: #87CEFA; /* Light Blue */
+    color: #ffffff; /* White */
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.footer {
+    text-align: center;
+    padding: 20px;
+       background: linear-gradient(to right, #D2B68A, #0056b3);
+    color: #ffffff; /* White */
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+.footer a {
+    color: #ffffff; /* White */
+    text-decoration: underline;
+}

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Feedback</title>
+    <link rel="stylesheet" href="C:\Users\HP\OneDrive\Desktop\STUDENT SUPPORT HUB\feedback.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Student Feedback</h1>
+        <form id="feedback-form">
+            <label for="student-name">Your Name:</label>
+            <input type="text" id="student-name" name="student-name" required>
+
+            <label for="student-email">Your Email:</label>
+            <input type="email" id="student-email" name="student-email" required>
+
+            <label for="feedback-type">Feedback Type:</label>
+            <select id="feedback-type" name="feedback-type" required>
+                <option value="">--Please choose an option--</option>
+                <option value="technical">Technical Issue</option>
+                <option value="advice">General Advice</option>
+                <option value="support">Support Request</option>
+                <option value="other">Other</option>
+            </select>
+
+            <label for="feedback-message">Your Feedback:</label>
+            <textarea id="feedback-message" name="feedback-message" rows="4" placeholder="Describe your experience or issue" required></textarea>
+
+            <button type="submit">Submit Feedback</button>
+        </form>
+    </div>
+
+    <script>
+        document.getElementById('feedback-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            alert('Thank you for your feedback!');
+            this.reset();
+        });
+    </script>
+</body>
+</html>

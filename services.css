@@ -1,0 +1,59 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #F0F8FF; /* light blue */
+}
+
+/* Navbar Styles */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #1E3A5F; /* navy blue */
+    padding: 1rem;
+}
+
+.navbar h1 {
+    color: white;
+    font-size: 24px;
+}
+
+#servicesBtn {
+    background-color: #FFFFFF; /* white */
+    border: none;
+    color: #1E3A5F; /* navy blue */
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+#servicesBtn:hover {
+    background-color: #A1C6EA; /* lighter blue */
+}
+
+/* Dropdown Styles */
+.dropdown-content {
+    display: none; /* Hide dropdown by default */
+    position: absolute;
+    background: rgba(173, 216, 230, 0.8); /* glass-like blue background */
+    backdrop-filter: blur(10px); /* blur effect for glass-like appearance */
+    border-radius: 10px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    min-width: 200px; /* Increased minimum width */
+    top: 60px; /* Position dropdown below button */
+    left: 50%; /* Center dropdown */
+    transform: translateX(-50%); /* Centering adjustment */
+}
+
+.dropdown-content a {
+    color: #1E3A5F; /* navy blue */
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: rgba(161, 198, 234, 0.5); /* lighter blue on hover */
+}

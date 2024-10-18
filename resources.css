@@ -1,0 +1,141 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Georgia', serif;
+    line-height: 1.6;
+    background-color: #FFFFFF; /* White Background */
+}
+
+header {
+    background-color: #002D72; /* Dark Blue */
+    color: #FFFFFF;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo {
+    font-size: 24px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin: 0 10px;
+}
+
+nav ul li a {
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+.search-bar {
+    padding: 5px;
+}
+
+.banner {
+    background-color: #ADD8E6; /* Light Blue */
+    color: #FFFFFF;
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.cta-button {
+    padding: 10px 20px;
+    background-color: #F7E7CE; /* Champagne */
+    color: #002D72; /* Dark Blue Text */
+    border: none;
+    cursor: pointer;
+}
+
+.resource-categories {
+    padding: 20px;
+}
+
+.cards {
+    display: flex;
+    justify-content: space-around;
+}
+
+.card {
+    background-color: #F7E7CE; /* Champagne */
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 20px;
+    width: 30%;
+    transition: transform 0.2s;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.featured-resources {
+    padding: 20px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.resource {
+    background-color: #F7E7CE; /* Champagne */
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.faq {
+    padding: 20px;
+}
+
+.accordion .faq-item {
+    margin-bottom: 10px;
+}
+
+.question {
+    cursor: pointer;
+    background-color: #ADD8E6; /* Light Blue */
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.answer {
+    display: none;
+    padding: 10px;
+    border-left: 3px solid #002D72; /* Dark Blue */
+}
+
+footer {
+    background-color: #002D72; /* Dark Blue */
+    color: #FFFFFF;
+    text-align: center;
+    padding: 10px 0;
+}
+
+.social-media a {
+    color: #FFFFFF;
+    margin: 0 5px;
+}
+
+.newsletter input {
+    padding: 5px;
+}
+
+.newsletter button {
+    padding: 5px 10px;
+    background-color: #F7E7CE; /* Champagne */
+    color: #002D72; /* Dark Blue */
+    border: none;
+    cursor: pointer;
+}

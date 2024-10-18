@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Appointment Booking</title>
+    <link rel="stylesheet" href="C:\Users\HP\OneDrive\Desktop\STUDENT SUPPORT HUB\Appointment.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Book an Appointment</h1>
+        <form id="appointment-form">
+            <label for="name">Your Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Your Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="appointment-type">Select Appointment Type:</label>
+            <select id="appointment-type" name="appointment-type" required>
+                <option value="">--Please choose an option--</option>
+                <option value="lecturer">Lecturer</option>
+                <option value="advisor">Advisor</option>
+                <option value="technical-support">Technical Support</option>
+            </select>
+
+            <label for="date">Preferred Date:</label>
+            <input type="date" id="date" name="date" required>
+
+            <label for="time">Preferred Time:</label>
+            <input type="time" id="time" name="time" required>
+
+            <label for="message">Additional Message:</label>
+            <textarea id="message" name="message" rows="4"></textarea>
+
+            <button type="submit">Book Appointment</button>
+        </form>
+    </div>
+
+    <script>
+        document.getElementById('appointment-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            alert('Appointment booked successfully!');
+            this.reset();
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Support Hub</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f4f8; /* Light background for contrast */
+            color: #333;
+        }
+        header {
+            background-color: #008080; /* Teal color for header */
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        h1 {
+            margin: 0;
+            font-size: 36px;
+        }
+        .container {
+            padding: 20px;
+        }
+        .search-bar {
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        input[type="text"] {
+            padding: 10px;
+            width: 60%;
+            border-radius: 5px;
+            border: 2px solid #008080; /* Teal border for input */
+            font-size: 16px;
+        }
+        .category {
+            margin-bottom: 20px;
+            padding: 10px;
+            background-color: #ffffff; /* White background for contrast */
+        }
+        h2 {
+            color: #008080; /* Teal color for section headings */
+            margin-bottom: 10px;
+        }
+        .question {
+            background-color: #e0f2f1; /* Light teal for questions */
+            padding: 15px;
+            cursor: pointer;
+            margin-top: 10px;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+        }
+        .question:hover {
+            background-color: #b2dfdb; /* Slightly darker teal on hover */
+        }
+        .answer {
+            display: none; /* Answers are hidden by default */
+            padding: 15px;
+            background-color: #ffffff; /* White background for answers */
+            border-left: 4px solid #008080; /* Teal left border for answers */
+            margin-top: 5px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Student Support Hub</h1>
+        <p>Your Quick Access to Student Questions</p>
+    </header>
+
+    <div class="container">
+        <!-- Search Bar -->
+        <div class="search-bar">
+            <input type="text" id="searchBar" placeholder="Search for questions..." onkeyup="searchQuestions()">
+        </div>
+
+        <!-- Academic Support -->
+        <div class="category">
+            <h2>Academic Support</h2>
+            <div class="question" onclick="toggleAnswer(this)">How do I register for courses?</div>
+            <div class="answer">You can register for courses through the student portal during the registration period.</div>
+
+            <div class="question" onclick="toggleAnswer(this)">What should I do if a course I want to register for is full?</div>
+            <div class="answer">You can join the waiting list or consult your academic advisor for alternative options.</div>
+
+            <div class="question" onclick="toggleAnswer(this)">Where can I find my class schedule?</div>
+            <div class="answer">Your class schedule is available on the student portal under the "My Courses" section.</div>
+
+            <div class="question" onclick="toggleAnswer(this)">How do I calculate my GPA?</div>
+            <div class="answer">To calculate your GPA, divide the total grade points earned by the total credit hours attempted.</div>
+        </div>
+
+        <!-- Examinations and Assessments -->
+        <div class="category">
+            <h2>Examinations and Assessments</h2>
+            <div class="question" onclick="toggleAnswer(this)">How do I register for exams?</div>
+            <div class="answer">You can register for exams through the examination section of the student portal.</div>
+
+            <div class="question" onclick="toggleAnswer(this)">What happens if I miss an exam?</div>
+            <div class="answer">If you miss an exam, you should contact your instructor immediately to discuss your options.</div>
+
+            <div class="question" onclick="toggleAnswer(this)">Where can I check my exam results?</div>
+            <div class="answer">Exam results can be found in the student portal under the "Grades" section.</div>
+
+            <div class="question" onclick="toggleAnswer(this)">How can I appeal a grade?</div>
+            <div class="answer">You can appeal a grade by submitting a formal appeal request through the academic office.</div>
+        </div>
+
+        <!-- Technical Support -->
+        <div class="category">
+            <h2>Technical Support</h2>
+            <div class="question" onclick="toggleAnswer(this)">How can I reset my portal password?</div>
+            <div class="answer">To reset your password, use the "Forgot Password" link on the login page of the student portal.</div>
+
+            <div class="question" onclick="toggleAnswer(this)">I’m unable to log into the student portal. What should I do?</div>
+            <div class="answer">If you can't log in, check your internet connection and ensure you're using the correct credentials.</div>
+
+            <div class="question" onclick="toggleAnswer(this)">Where can I download software required for my course?</div>
+            <div class="answer">Required software can be downloaded from the IT services section of the student portal.</div>
+
+            <div class="question" onclick="toggleAnswer(this)">How do I access the school's Wi-Fi network?</div>
+            <div class="answer">You can access the school's Wi-Fi network using your student credentials. Refer to the IT services for more details.</div>
+        </div>
+
+        <!-- Library and Research -->
+        <div class="category">
+            <h2>Library and Research</h2>
+            <div class="question" onclick="toggleAnswer(this)">How do I access the digital library?</div>
+            <div class="answer">Access the digital library via the library section of the student portal using your login credentials.</div>
+
+            <div class="question" onclick="toggleAnswer(this)">How long can I borrow a book from the library?</div>
+            <div class="answer">You can borrow a book for up to three weeks, with the option to renew if there are no holds.</div>
+
+            <div class="question" onclick="toggleAnswer(this)">Where can I find citation guides for my research?</div>
+            <div class="answer">Citation guides are available in the library resources section on the student portal.</div>
+
+            <div class="question" onclick="toggleAnswer(this)">How do I reserve a book that’s currently unavailable?</div>
+            <div class="answer">You can reserve a book through the library's online catalog or by contacting the library staff.</div>
+        </div>
+
+        <!-- Student Life and Campus Services -->
+        <div class="category">
+            <h2>Student Life and Campus Services</h2>
+            <div class="question" onclick="toggleAnswer(this)">How do I apply for student accommodation?</div>
+            <div class="answer">Apply for accommodation through the student services section on the student portal.</div>
+
+            <div class="question" onclick="toggleAnswer(this)">Where can I find information about campus events?</div>
+            <div class="answer">Information about campus events can be found on the university's events page on the website.</div>
+
+            <div class="question" onclick="toggleAnswer(this)">How do I request a transcript?</div>
+            <div class="answer">You can request a transcript through the registrar's office or online via the student portal.</div>
+
+            <div class="question" onclick="toggleAnswer(this)">How can I access counseling services?</div>
+            <div class="answer">Counseling services can be accessed by visiting the student wellness center or through the student portal.</div>
+        </div>
+    </div>
+
+    <script>
+        // Script for search functionality
+        function searchQuestions() {
+            var input, filter, categories, questions, i, txtValue;
+            input = document.getElementById("searchBar");
+            filter = input.value.toLowerCase();
+            categories = document.getElementsByClassName("category");
+
+            for (i = 0; i < categories.length; i++) {
+                questions = categories[i].getElementsByClassName("question");
+                for (var j = 0; j < questions.length; j++) {
+                    txtValue = questions[j].textContent || questions[j].innerText;
+                    if (txtValue.toLowerCase().indexOf(filter) > -1) {
+                        questions[j].style.display = "";
+                    } else {
+                        questions[j].style.display = "none";
+                    }
+                }
+            }
+        }
+
+        // Script to toggle answers
+        function toggleAnswer(questionElement) {
+            var answer = questionElement.nextElementSibling;
+            answer.style.display = (answer.style.display === "none" || answer.style.display === "") ? "block" : "none";
+        }
+    </script>
+
+</body>
+</html>

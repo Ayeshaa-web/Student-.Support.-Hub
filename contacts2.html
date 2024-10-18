@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Help Desk Management System</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #f4f4f4 0%, #e0e0e0 100%);
+        }
+        header {
+             background: linear-gradient(to right, #D2B68A, #0056b3);
+            color: #fff;
+            padding: 1.5rem 0;
+            text-align: center;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+        }
+        .contact-info, .contact-form {
+            background: #fff;
+            padding: 2rem;
+            margin: 2rem 0;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .contact-info:hover, .contact-form:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+            font-weight: bold;
+        }
+        .contact-info h2, .contact-form h2 {
+            color: #;
+            margin-top: 0;
+        }
+        .contact-info p, .contact-form p {
+            margin: 0.5rem 0;
+            line-height: 1.6;
+        }
+        .contact-form input, .contact-form textarea {
+            width: 100%;
+            padding: 0.75rem;
+            margin: 0.5rem 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            transition: border-color 0.3s;
+        }
+        .contact-form input:focus, .contact-form textarea:focus {
+            border-color: #007BFF;
+            outline: none;
+        }
+        .contact-form button {
+            background: #D2B68A;
+            color: #fff;
+            border: none;
+            padding: 1rem;
+            cursor: pointer;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+        .contact-form button:hover {
+            background:  #ADD8E6;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Student Support Hub</h1>
+    </header>
+
+    <div class="container">
+        <div class="contact-info" id="contact">
+            <h2>Contact Information</h2>
+            <p>If you need any assistance, feel free to reach out to us using the following contact details:</p>
+            <p><strong>Email:</strong> studentsupporthub@gmail.com</p>
+            <p><strong>Phone:</strong>0727989656</p>
+            <p><strong>Address:</strong>Eldoret,Kenya</p>
+        </div>
+
+        <div class="contact-form">
+            <h2>Send Us a Message</h2>
+            <form action="/submit-contact" method="post">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="subject">Subject:</label>
+                <input type="text" id="subject" name="subject" required>
+
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="6" required></textarea>
+
+                <button type="submit">Send Message</button> 
+				<span style="position;absolute;left:100px;,">
+			<a href="C:\Users\HP\OneDrive\Desktop\submit.html"</a>
+
+            </form>
+        </div>
+    </div>
+</body>
+</html>

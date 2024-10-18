@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Support Hub</title>
+    <link rel="stylesheet" href="C:\Users\HP\OneDrive\Desktop\STUDENT SUPPORT HUB\services.css"> 
+    <style>
+        /* Dropdown Styles */
+        .dropdown-content {
+            display: none; /* Hidden by default */
+            position: absolute; /* Position relative to the button */
+            background: rgba(173, 216, 230, 0.8); /* Glass-like blue */
+            backdrop-filter: blur(10px); /* Blur effect */
+            border-radius: 10px;
+            box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+            min-width: 200px; /* Minimum width for dropdown */
+        }
+
+        .dropdown-content a {
+            color: #1E3A5F; /* Navy blue */
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block; /* Stack links vertically */
+        }
+
+        .dropdown-content a:hover {
+            background-color: rgba(161, 198, 234, 0.5); /* Light blue on hover */
+        }
+
+        /* Styles for the button */
+        .service-button {
+            background-color: #FFFFFF; /* Button color */
+            color: #1E3A5F; /* Text color */
+            padding: 10px 20px;
+            border: none; /* Remove border */
+            border-radius: 5px;
+            cursor: pointer; /* Pointer cursor */
+            font-size: 16px; /* Font size */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <div id="servicesBtn" class="service-button">Services</div> 
+            <div id="dropdown" class="dropdown-content">
+                <a href="#">Academic Support</a>
+                <a href="#">Technical Assistance</a>
+                <a href="#">Counseling Services</a>
+                <a href="#">Career Guidance</a>
+                <a href="#">Library Access</a>
+            </div>
+        </div>
+    </header>
+
+    <script>
+        // JavaScript to toggle dropdown visibility
+        document.getElementById("servicesBtn").addEventListener("click", function(event) {
+            event.preventDefault(); // Prevent default action
+            var dropdown = document.getElementById("dropdown");
+            // Toggle dropdown visibility
+            dropdown.style.display = dropdown.style.display === "block" ? "none" : "block";
+        });
+
+        // Close dropdown if clicked outside
+        window.onclick = function(event) {
+            if (!event.target.matches('#servicesBtn') && !event.target.matches('#dropdown') && !event.target.matches('#dropdown a')) {
+                var dropdown = document.getElementById("dropdown");
+                if (dropdown.style.display === "block") {
+                    dropdown.style.display = "none";
+                }
+            }
+        };
+    </script>
+</body>
+</html>

@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .login-container {
+            background-color: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            max-width: 400px;
+            width: 100%;
+        }
+
+        h2 {
+            text-align: center;
+            color: #333;
+        }
+
+        .input-group {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            color: #333;
+            margin-bottom: 5px;
+        }
+
+        input[type="text"],
+        input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            border: 2px solid #ddd;
+            border-radius: 5px;
+            font-size: 16px;
+            transition: border-color 0.3s;
+        }
+
+        input[type="text"]:focus,
+        input[type="password"]:focus {
+            border-color: #ff8c42; /* Warm orange for input focus */
+            outline: none;
+        }
+
+        .login-btn {
+            background-color:#f4b400;
+            color: white;
+            border: none;
+            width: 100%;
+            padding: 12px;
+            font-size: 18px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .login-btn:hover {
+            background-color: #ff9900;
+        }
+
+        .forgot-password {
+            text-align: center;
+            display: block;
+            margin-top: 15px;
+            color: #888;
+            text-decoration: none;
+            font-size: 14px;
+        }
+
+        .forgot-password:hover {
+            color: #555;
+        }
+
+        .remember-me {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .remember-me input {
+            margin-right: 10px;
+        }
+
+        @media (max-width: 600px) {
+            .login-container {
+                padding: 20px;
+            }
+
+            input[type="text"], 
+            input[type="password"] {
+                font-size: 14px;
+            }
+        }
+
+        .error {
+            color: red;
+            text-align: center;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="login-container">
+        <h2>Login</h2>
+        <form id="loginForm">
+            <div class="input-group">
+                <label for="username">Username or Email</label>
+                <input type="text" id="username" name="username" placeholder="Enter your username" required autofocus>
+            </div>
+            <div class="input-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" placeholder="Enter your password" required>
+            </div>
+            <div class="remember-me">
+                <input type="checkbox" id="remember" name="remember">
+                <label for="remember">Remember Me</label>
+            </div>
+            <button type="submit" class="login-btn">Login</button>
+            <a href="#" class="forgot-password">Forgot Password?</a>
+            <div id="errorMessage" class="error"></div>
+        </form>
+    </div>
+
+    <script>
+        // Hardcoded credentials
+        const validUsername = "user123";
+        const validPassword = "password123";
+
+        // Login form submission
+        document.getElementById('loginForm').addEventListener('submit', function(e) {
+            e.preventDefault(); // Prevent form from submitting
+
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+            const errorMessage = document.getElementById('errorMessage');
+
+            // Basic authentication check
+            if (username === validUsername && password === validPassword) {
+                alert("Login successful!");
+                // Redirect to another page or handle successful login
+                window.location.href = "homepage.html"; // Example redirect
+            } else {
+                errorMessage.textContent = "Invalid username or password";
+            }
+        });
+    </script>
+
+</body>
+</html>
